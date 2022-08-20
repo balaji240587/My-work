@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var nameObj={name:"shubham",place:"bangole"}
+    localStorage.setItem("dataObj",nameObj)//you will see only object Object
+
+    //so set item we have stringify it
+
+    localStorage.setItem("dataObj",JSON.stringify(nameObj))
+
+    var a =JSON.parse(localStorage.getItem("dataObj",nameObj)) 
+    console.log(a)
+
+    //json and obj
+
+    //object
+    var obj={name:"vijay"}//only value is in ""
+
+    //json
+    var JSONObj={"name":"vijay"}//key and value both are in " "
+
+    //storing an array or object = JSON.stringify()
+    //getting array or object = JSON.parse()
+
+
+</script>

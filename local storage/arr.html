@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var numbers =[1,2,3,4]
+
+    localStorage.setItem("LuckyNumbers",numbers)
+
+    var array = localStorage.getItem("LuckyNumbers")
+    console.log(typeof array)
+
+    //localStorage will accept to store only strings and numbers
+    // it will store like "1,2,3,4"
+
+    //so if you want to store in array format there is JSON methode
+    var num1 = [2,4,6,8]
+    localStorage.setItem("LuckyNumbers1",JSON.stringify(num1))
+    //here only we can store the array in array format but we get an array in string format
+    var array1 = localStorage.getItem("LuckyNumbers1")//format is string, while getting it
+
+    // so to get Item in an array format use following methode
+    //JSON.parse
+    var array1=JSON.parse(localStorage.getItem("LuckyNumbers1"))
+    console.log(typeof array1)//type will an object
+    console.log(array1)
+
+    var names=["balaji","anurag","nagesh"]
+    localStorage.setItem("student_name",JSON.stringify(names))
+    var get =JSON.parse(localStorage.getItem("student_name"))
+    console.log(get)
+</script>
